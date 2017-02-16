@@ -10,6 +10,15 @@
 #include <stdio.h>
 #include <tchar.h>
 
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <sstream>
 
+#include <vector>
+#include <algorithm>
+#include <iterator>
+
+#include <cassert>
 
 // TODO: reference additional headers your program requires here
