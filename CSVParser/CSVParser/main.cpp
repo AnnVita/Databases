@@ -47,13 +47,16 @@ int main(int argc, char * argv[])
 			std::cout << "Record id: ";
 			while (getline(input, line))
 			{
-				auto tableRow = ParseByDelimiter(line);
+				tableRow = ParseByDelimiter(line);
 				if (tableRow[srcPosition] == searchingValue || tableRow[srcPosition] == "\"" + searchingValue + "\"")
 				{
 					results.push_back(tableRow[dstPosition]);
 				}
 			}
 			std::copy(results.begin(), results.end(), std::ostream_iterator<std::string>(std::cout, " "));
+			results.clear();
+			input.clear();
+			input.seekg(0, std::ios::beg);
 			std::cout << std::endl;
 		}		
 	}
